@@ -1,4 +1,5 @@
-﻿using System;
+﻿//输出user32.dll函数信息。dumpbin /exports user32.dll >U:\DesktopBridgeProjects\PInvokeSamples\PInvokeSamples\PInvoke.Shared\user32dllFunctionList.txt
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
