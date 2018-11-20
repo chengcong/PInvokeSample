@@ -25,6 +25,7 @@ namespace PInvokeSamples
         public static extern int _flushall();
         /// <summary>
         /// Win32 API调用：弹出对话框
+        /// 原型：int MessageBox(HWND hWnd,LPCTSTR lpText,LPCTSTR lpCaption,UINT uType);
         /// </summary>
         /// <param name="hWnd">对话框句柄</param>
         /// <param name="lpText">输出文本</param>
