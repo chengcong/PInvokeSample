@@ -9,6 +9,6 @@
     <Import_RootNamespace>PInvoke.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)PInvoke.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WindowsAPI.cs" />
   </ItemGroup>
 </Project>

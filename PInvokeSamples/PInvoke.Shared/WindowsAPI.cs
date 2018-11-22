@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PInvokeSamples
+namespace WindowsAPI
 {
-    public class PInvoke
+    public class msvcrt
     {
         /// <summary>
         /// 标准微软C运行库"msvcrt.dll"：输出文本
@@ -23,6 +23,10 @@ namespace PInvokeSamples
         /// <returns></returns>
         [DllImport("msvcrt.dll")]
         public static extern int _flushall();
+    }
+    public class user32
+    {
+
         /// <summary>
         /// Win32 API调用：弹出对话框
         /// 原型：int MessageBox(HWND hWnd,LPCTSTR lpText,LPCTSTR lpCaption,UINT uType);
@@ -32,7 +36,21 @@ namespace PInvokeSamples
         /// <param name="lpCaption">标题</param>
         /// <param name="uType">对话框类型</param>
         /// <returns></returns>
-        [DllImport("user32.dll",EntryPoint ="MessageBox")]
+        [DllImport("user32.dll", EntryPoint = "MessageBox")]
         public static extern int MessageBox(int hWnd, string lpText, string lpCaption, uint uType);
+
+
+    }
+    public class kernel32
+    {
+        /// <summary>
+        /// 获取Windows系统目录（System目录）的完整路径
+        /// </summary>
+        /// <param name="lpBuffer">用于装载系统目录路径的一个字符串缓冲区</param>
+        /// <param name="uSize">lpBuffer字串的最大长度</param>
+        /// 原型：UINT GetSystemDirectory(LPTSTR lpBuffer,UINT uSize);
+        /// <returns></returns>
+        [DllImport("kernel32.dll")]
+        public static extern uint GetSystemDirectory(StringBuilder lpBuffer, uint uSize);
     }
 }
